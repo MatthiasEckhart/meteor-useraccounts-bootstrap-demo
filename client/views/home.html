@@ -2,6 +2,7 @@
     <div class="container">
         <div class="text-center">
             <h1>Hello {{name}}!</h1>
+            {{#if currentUser}}
             <hr/>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Change username..." id="new-username">
@@ -9,6 +10,7 @@
                     <button class="btn btn-default" type="button" id="change-username">Go!</button>
                 </span>
             </div>
+            {{/if}}
         </div>
     </div>
 </template>
