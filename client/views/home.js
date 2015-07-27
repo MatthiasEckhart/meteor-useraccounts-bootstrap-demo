@@ -6,11 +6,11 @@ Template.home.helpers({
 });
 
 Template.home.events({
-   'click #change-username': function(e) {
+   'click #change-name': function(e) {
        e.preventDefault();
-       var usernameEl = $('#new-username');
-       var username = usernameEl.val();
-       Meteor.users.update({'_id': Meteor.userId()}, {$set: {'profile.name': username}});
-       usernameEl.val('');
+       var nameEl = $('#new-name');
+       var name = nameEl.val();
+       Meteor.users.update({'_id': Meteor.userId()}, {$set: {'profile.name': name}});
+       nameEl.val('');
    }
 });
